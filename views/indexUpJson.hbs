@@ -1,0 +1,60 @@
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Mi Página Web</title>
+    <style>
+      form { /* Añade estilos al formulario */ background-color: #f7f7f7;
+      padding: 20px; border-radius: 5px; max-width: 300px; margin: auto; }
+      .form-group { /* Añade espacio entre los campos del formulario */
+      margin-bottom: 10px; } label { /* Estilos para las etiquetas */ display:
+      block; margin-bottom: 5px; } body { display: flex; min-height: 100vh;
+      flex-direction: column; } header, footer { background-color: #333; color:
+      white; padding: 1rem; text-align: center; } .content { flex: 1; display:
+      flex; } .sidebar { width: 200px; background-color: #f4f4f4; padding: 1rem;
+      } .main-content { flex: 1; padding: 1rem; } input[type="submit"]:hover {
+      background-color: #4cae4c; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{{message}}</h1>
+    </header>
+
+    <div class='content'>
+      <aside class='sidebar'>
+        <h2>JSON</h2>
+        <!-- Contenido del sidebar aquí -->
+      </aside>
+
+      <main class='main-content'>
+        <h2>Principal</h2>
+
+        <form
+          action='/nest-gui-repot/gui-cinemometros/upload'
+          method='post'
+          enctype='multipart/form-data'
+        >
+          <div class='form-group'>
+            <label for='folder'>Seleccionar Carpeta:</label>
+            <input
+              type='file'
+              name='files'
+              webkitdirectory
+              directory
+              multiple
+            />
+          </div>
+
+          <button type='submit'>Subir Archivos</button>
+        </form>
+        <!-- Contenido principal aquí -->
+      </main>
+    </div>
+
+    <footer>
+      <p>AGENCIA METROPOLITANA DE TRÁNSITO</p>
+      <p>© 2024 AMT KR</p>
+    </footer>
+  </body>
+</html>

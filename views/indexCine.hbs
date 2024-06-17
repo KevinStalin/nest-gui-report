@@ -1,0 +1,26 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>{{message}}</h1>
+    <button id='select-folder'>Seleccionar Carpeta</button>
+    <ul id='file-list'></ul>
+
+    <form action='/upload' method='post' enctype='multipart/form-data'>
+      <input type='file' name='folder' id='folder' />
+      <button type='submit'>Subir Carpeta</button>
+    </form>
+
+    <script>
+      const URL_SER="http://localhost:9889/nest-gui-repot/gui-cinemometros"
+      document.getElementById('select-folder').addEventListener('click', async
+      () => { const response = await fetch(`${URL_SER}/select-folder`); const
+      files = await response.json(); const fileList =
+      document.getElementById('file-list'); fileList.innerHTML = '';
+      files.forEach(file => { const li = document.createElement('li');
+      li.textContent = file; fileList.appendChild(li); }); });
+    </script>
+  </body>
+</html>
