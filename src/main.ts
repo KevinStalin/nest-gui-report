@@ -25,6 +25,8 @@ async function bootstrap() {
   // );
   nestApp.setViewEngine('hbs'); // Establecer Handlebars como motor de vistas
   nestApp.setBaseViewsDir(join(__dirname, '..', 'views')); // Directorio base donde están las vistas
+  // Servir archivos estáticos desde el directorio 'public'
+  nestApp.useStaticAssets(join(__dirname, '..', 'public'));
 
   const configService = nestApp.get(ConfigService);
   await nestApp.listen(configService.get<number>('dao.PORT'));

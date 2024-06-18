@@ -72,7 +72,7 @@ export class GuiCinemometrosController {
       console.log('No se seleccionó una carpeta válida');
       return;
     }
-    console.log('Archivos seleccionados:', files);
+    // console.log('Archivos seleccionados:', files);
     // Lógica de procesamiento de los archivos aquí
     const buffer = await this.guiCinemometrosService.mainJson(files);
 

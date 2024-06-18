@@ -1,0 +1,45 @@
+form {
+  /* Añade estilos al formulario */
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 300px;
+  margin: auto;
+}
+.form-group {
+  /* Añade espacio entre los campos del formulario */
+  margin-bottom: 10px;
+}
+label {
+  /* Estilos para las etiquetas */
+  display: block;
+  margin-bottom: 5px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+header,
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.content {
+  flex: 1;
+  display: flex;
+}
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+input[type='submit']:hover {
+  background-color: #4cae4c;
+}
